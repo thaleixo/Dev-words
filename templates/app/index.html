@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevWords</title>
+    <!-- Incluindo o CSS do Bootstrap -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'styles/style.css' %}">
+
+</head>
+
+   {% block content %}{% endblock %}
+   {% include 'app/base.html' %}
+
+   <h1 class="display-4 text-center mt-5">Bem-vindo ao DevWords</h1>
+
+   <marquee     scrollamount="3"
+                 scrolldelay="14"
+                 truespeed="truespeed"
+                 direction="right"
+                 loop="">
+    <img src="{% static 'assets/python.png' %}" style="width: 150px; border-radius: 50px;" alt="">
+    <img src="{% static 'assets/java.jpg' %}" style="width: 150px;  border-radius: 50px;" alt="">
+    <img src="{% static 'assets/javascript.png' %}" style="width: 150px;  border-radius: 50px;" alt="">
+   </marquee>
+   {% include 'app/footer.html' %}
+
+
+
+    <!-- Incluindo o JS do Bootstrap e suas dependências -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
